@@ -31,11 +31,6 @@
             <span class="results-slide__name">{{ slide.name }}</span>
             <span class="results-slide__text">{{ slide.text }}</span>
           </div>
-          <div
-            v-if="slide.showPlay"
-            class="results-slide__play"
-            @click="play(slide)"
-          ></div>
         </div>
       </swiper-slide>
     </swiper>
@@ -91,40 +86,6 @@ export default {
     return {
       modules: [Pagination],
     };
-  },
-  methods: {
-    startPlay(idx) {
-      const video = document.querySelectorAll("video");
-
-      console.log(video);
-
-      video.forEach((v, i) => {
-        if (i === idx) {
-          v.play();
-        }
-      });
-    },
-    stopPlay(idx) {
-      const video = document.querySelectorAll("video");
-
-      video.forEach((v, i) => {
-        if (i === idx) {
-          v.pause();
-        }
-      });
-    },
-
-    play(slide) {
-      this.results.forEach((item, idx) => {
-        if (item === slide) {
-          item.showPlay = false;
-          this.startPlay(idx);
-        } else {
-          item.showPlay = true;
-          this.stopPlay(idx);
-        }
-      });
-    },
   },
 };
 </script>
