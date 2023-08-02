@@ -1,0 +1,101 @@
+.results {
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        &_italic {
+            font-style: italic;
+            font-weight: 400;
+        }
+    }
+
+    &-text {
+        text-align: center;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    &-slide {
+        position: relative;
+        max-width: 268px;
+        width: 100vw;
+        max-height: 268px;
+        height: 100vh;
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+
+        &__info {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 134px;
+            width: 100%;
+            background: linear-gradient(0deg, #0A0021 0%, rgba(10, 0, 33, 0.00) 100%);
+        }
+
+        &__name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+
+        &__play {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50px;
+            height: 50px;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            z-index: 2;
+            background-image: url("../../images/results/play.png");
+        }
+    }
+
+    .swiper {
+        padding-bottom: 39px;
+
+        &-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        background: #B18FFF;
+
+        &-active {
+            background: #fff;
+        }
+    }
+}
+
+

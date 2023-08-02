@@ -1,0 +1,88 @@
+
+
+// USER VARIABLES SECTION
+
+@accent: orange; // Accent Color
+@fontsize: 16px; // Body Font Size
+@textcolor: #fff; // Text Color
+@lineheight: 1.28; // Document Line Height
+@userfont: greycliff, sans-serif; // User Font Family
+@tungsten: tungsten, sans-serif;
+@charter: charter, sans-serif; // User secondary font
+@systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// IMPORT SECTION
+
+// FONTS LOAD SECTION
+
+.font(@fname, @fstyle, @fweight, @furl) {
+	@font-face {
+		font-family: @fname;
+		font-style: @fstyle;
+		font-weight: @fweight;
+		src: url(@furl) format('woff2');
+	}
+}
+
+.font('greycliff', normal, 700, '../fonts/Greycliff/GreycliffCF-Bold.woff2');
+.font('greycliff', normal, 400, '../fonts/Greycliff/GreycliffCF-Regular.woff2');
+.font('greycliff', normal, 500, '../fonts/Greycliff/GreycliffCF-Medium.woff2');
+.font('greycliff', normal, 600, '../fonts/Greycliff/GreycliffCF-DemiBold.woff2');
+
+.font('charter', italic, 400, '../fonts/Charter/CharterITC-ReguItal.woff2');
+.font('charter', normal, 400, '../fonts/Charter/CharterITC-Regu.woff2');
+
+.font('tungsten', normal, 400, '../fonts/Tungsten/Tungsten-Bold.woff2');
+
+
+// GENERAL CSS SETTINGS
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: @accent;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid { border-color: red }
+	&:required:valid { border-color: green }
+}
+
+body {
+	font-family: @userfont;
+	font-size: @fontsize;
+	line-height: @lineheight;
+	color: @textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+	background: #0A0021;
+    margin: 0;
+}
+
+.container {
+	max-width: 600px;
+	padding: 0 30px 0 30px;
+	margin: 0 auto;
+}
+
+.btn {
+	outline: none;
+	box-shadow: none;
+	border: none;
+	cursor: pointer;
+}
+
+.g-plan-page {
+	overflow: hidden;
+}

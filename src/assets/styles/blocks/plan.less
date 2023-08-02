@@ -1,0 +1,162 @@
+.plan {
+    padding: 39px 0;
+
+    &-title {
+        font-family: @charter;
+        font-size: 28px;
+        margin-bottom: 35px;
+
+        span {
+            text-decoration: underline;
+            text-decoration-color: #FFE786;
+        }
+    }
+
+    &-info {
+        display: flex;
+        align-items: flex-start;
+
+        &__img {
+            transform: translateY(27px);
+            margin-right: 29px;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        &__item {
+            position: relative;
+            padding-left: 27px;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 11px;
+                height: 12px;
+                background-image: url("data:image/svg+xml,%3Csvg width='11' height='13' viewBox='0 0 11 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.6094 6.14844C10.7031 6.24219 10.75 6.38281 10.75 6.5C10.75 6.64062 10.7031 6.78125 10.6094 6.875L5.92188 12.3125C5.80469 12.4531 5.64062 12.5 5.5 12.5C5.33594 12.5 5.17188 12.4531 5.05469 12.3125L0.367188 6.875C0.273438 6.78125 0.25 6.64062 0.25 6.5C0.25 6.35938 0.273438 6.21875 0.367188 6.125L5.05469 0.6875C5.17188 0.570312 5.33594 0.5 5.5 0.5C5.64062 0.5 5.80469 0.570312 5.92188 0.710938L10.6094 6.14844Z' fill='%234E00FF'/%3E%3C/svg%3E%0A");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+        }
+    }
+
+    &-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 80px;
+        max-width: max-content;
+    }
+
+    &-description {
+        display: flex;
+        align-items: center;
+        background: radial-gradient(59.53% 46.52% at 50% 49.07%, rgba(172, 136, 253, 0.00) 0%, rgba(172, 136, 253, 0.20) 0.05%, rgba(172, 136, 253, 0.00) 100%);
+        padding-bottom: 170px;
+
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__title {
+            color: #FFE786;
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            color: #E7DCFF;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 24px;
+            min-width: 205px;
+        }
+
+        &__img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateX(-30px);
+
+            @media (max-width: 411px) {
+                transform: translateX(-62px);
+            }
+        }
+    }
+
+    &-include {
+        display: flex;
+        flex-direction: column;
+        padding-top: 24px;
+        padding-right: 8px;
+        padding-bottom: 37px;
+        padding-left: 34px;
+        border-radius: 16px;
+        border: 1px solid #442E74;
+        background: #FFF;
+        margin-top: -145px;
+
+        &__title {
+            color: #0A0021;
+            font-family: @charter;
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 27px;
+            text-align: center;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        &__img {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border-radius: 8px;
+            background: #E7DCFF;
+            margin-right: 18px;
+            min-width: 65px;
+            min-height: 50px;
+
+            &.align-items-center {
+                align-items: center;
+            }
+        }
+
+        &__text {
+            color: #0A0021;
+            font-size: 16px;
+            line-height: 22px;
+            font-weight: 500;
+        }
+
+        &__link {
+            display: block;
+            color: #B18FFF;
+            font-family: @charter;
+            font-size: 16px;
+            font-style: italic;
+            text-align: center;
+        }
+    }
+}
