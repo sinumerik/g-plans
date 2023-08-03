@@ -23,7 +23,11 @@
         <swiper-slide v-for="slide in results" :key="slide.id">
           <div class="results-slide">
             <video controls preload :poster="slide.poster">
-              <source :src="slide.url" type="video/mp4" />
+              <source
+              :key="slide.url"
+                :src="slide.url"
+                type="video/mp4"
+              />
             </video>
             <div
               v-if="slide.showPlay"
@@ -50,6 +54,13 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";
 
+import RebVideo from '../assets/images/results/ShiftReb.mp4';
+import RebPoster from '../assets/images/results/ShiftReb.png';
+import AmbVideo from '../assets/images/results/ShiftAmb.mp4';
+import AmbPoster from '../assets/images/results/ShiftAmb.png';
+import AlyVideo from '../assets/images/results/ShiftAly.mp4';
+import AlyPoster from '../assets/images/results/ShiftAly.png';
+
 // Import Swiper styles
 export default {
   components: {
@@ -63,24 +74,24 @@ export default {
           id: 0,
           name: "Rebecca",
           text: "Lost 67 lbs and 13 inches!",
-          url: "/g-plans/src/assets/images/results/ShiftReb.mp4",
-          poster: "/g-plans/src/assets/images/results/ShiftReb.png",
+          url: RebVideo,
+          poster: RebPoster,
           showPlay: true,
         },
         {
           id: 1,
           name: "Amber",
           text: "Lost 52 lbs and 9% body fat!",
-          url: "/g-plans/src/assets/images/results/ShiftAmb.mp4",
-          poster: "/g-plans/src/assets/images/results/ShiftAmb.png",
+          url: AmbVideo,
+          poster: AmbPoster,
           showPlay: true,
         },
         {
           id: 2,
           name: "Alyssa",
           text: "Lost 37 lbs so far!",
-          url: "/g-plans/src/assets/images/results/ShiftAly.mp4",
-          poster: "/g-plans/src/assets/images/results/ShiftAly.png",
+          url: AlyVideo,
+          poster: AlyPoster,
           showPlay: true,
         },
       ],
@@ -89,6 +100,12 @@ export default {
   setup() {
     return {
       modules: [Pagination],
+      RebVideo,
+      RebPoster,
+      AmbVideo,
+      AmbPoster,
+      AlyVideo,
+      AlyPoster
     };
   },
   methods: {
