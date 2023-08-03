@@ -12,7 +12,7 @@
             <div
               @click.stop="chooseOffer(offer)"
               class="best-item"
-              :class="{ sell: offer.sellStatus, active: offer.offerStatus}"
+              :class="{ active: offer.offerStatus}"
               v-for="offer in offers"
               :key="offer.id"
             >
